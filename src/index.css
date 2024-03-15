@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: League Spartan, sans-serif;
+
+}
+button,button:active,button:focus{
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    text-transform: uppercase !important;
+}
