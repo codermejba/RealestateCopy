@@ -1,14 +1,80 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: League Spartan, sans-serif;
-
+    list-style: none;
 }
-button,button:active,button:focus{
+
+:root {
+    --primary-color: #16a34a;
+    --primary-hover-color: #00A34A;
+    --secondary-color: rgb(161 165 175);;
+}
+
+button,
+button:active,
+button:focus {
     cursor: pointer;
     background: none;
     border: none;
     outline: none;
     text-transform: uppercase !important;
+}
+a{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+body {
+    font-family: League Spartan, sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    height: 200vh;
+}
+
+.scrollEffect {
+    background: hsla(0, 0%, 100%, .8) !important;
+    border-bottom: 1px solid #e5e7eb;
+    backdrop-filter: blur(12px);
+}
+
+.blackLogo {
+    color: black !important;
+}
+
+.active {
+    color: white !important;
+}
+
+.scrolledActiveColor {
+    color: #16a34a !important;
+}
+
+.grayNav li {
+    color: rgb(161 165 175);
+
+}
+
+.grayNav li:hover {
+    color: white;
+}
+
+.blackNav li {
+    color: black;
+}
+
+.blackNav li:hover {
+    color: #16a34a !important;
+}
+@media (max-width: 1050px) {
+    .active{
+        color: #16a34a !important;
+      }
+    .grayNav li,.blackNav li{
+        color: black;
+    }
+     .grayNav li:hover,.blackNav li:hover{
+          color:  #16a34a;
+      }
 }

@@ -57,7 +57,7 @@ const HeaderBody = () => {
 };
 const Main = styled.div`
   color: white;
-  height: calc(100vh - 10vh);
+  height: calc(120vh - 0vh);
   display: flex;
   flex-direction: column;
   justify-content: center;

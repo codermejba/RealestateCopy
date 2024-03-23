@@ -5,6 +5,7 @@ const HeaderButton = styled.button`
   color: white;
   font-size: 16px;
   font-weight: 500;
+  text-transform: capitalize !important;
   height: 2.5rem;
   line-height: 24px;
   padding-left: 1.75rem;

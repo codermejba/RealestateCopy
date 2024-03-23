@@ -1,22 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProfileIcon from "../../../public/icons/ProfileIcon";
 import HeaderButton from "../../assets/buttonStyle/HeaderButton";
 
 const Navigation = () => {
   const [clicked, setClicked] = useState(false);
-
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    /**
+     * Function to handle the scroll event and update the component state accordingly.
+     * It checks if the window has scrolled past the top and updates the state accordingly.
+     * If the window has scrolled past the top, it sets the scrolled state to true,
+     * otherwise it sets it to false.
+     */
+    const handleScroll = () => {
+      // Check if the window has scrolled past the top
+      if (window.scrollY > 0) {
+        // Set the scrolled state to true
+        setScrolled(true);
+      } else {
+        // Set the scrolled state to false
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  })
   return (
-    <NavSection>
+    <NavSection className={scrolled ? "scrollEffect" : ""}>
       <div className="container d-flex justify-content-between align-items-center h-100">
-        <div id="logo" className=" d-flex ">
+        <div id="logo" className={` d-flex ${scrolled ? "blackLogo" : ""}`}>
           <img src="img/logo.ico" alt="logo" />
           <h4>Realestate</h4>
         </div>
         <NavigationBar className="d-flex align-items-center gap-3 gap-md-4 gap-lg-5">
-          <ul id="navigation" className={"nav " + (clicked ? "navShow" : "")}>
-            <li className="active">Home</li>
-            <li>Buy</li>
+          <ul id="navigation" className={`nav ${clicked ? "navShow" : ""} ${scrolled ? "blackNav" : "grayNav"}`} >
+            <li className={scrolled ? "scrolledActiveColor" : "active"}> <a href="#home">Home</a></li>
+            <li ><a href="#search">Buy</a></li>
             <li>sell</li>
             <li>pages</li>
             <li>contact</li>
@@ -43,15 +65,23 @@ const Navigation = () => {
 
 const NavSection = styled.nav`
   height: 10vh;
-  position: relative;
+  position: fixed;
+  background: transparent;
+  top: 0;
+    left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all .5s cubic-bezier(.4,0,.2,1);
+  border-bottom: 1px solid transparent;
+
   #logo {
     align-items: center;
-    color: white;
+    color: #ffffff;
     gap: 10px;
     cursor: pointer;
     img,
     h4 {
-      height: 24px;
+      height: 30px;
       margin: 0 !important;
     }
   }
@@ -83,20 +113,13 @@ const NavigationBar = styled.div`
     align-items: center;
     font-size: 16px;
     letter-spacing: 1px;
-    color: rgb(161 165 175);
-.active{
-        color: white;
-      }
+    
     li {
       padding: 0 20px;
       cursor: pointer;
       text-transform: capitalize;
       font-weight: 600;
       transition: color 0.3s;
-      
-      &:hover {
-        color: white;
-      }
     }
   }
   #hamburg {
@@ -178,15 +201,7 @@ const NavigationBar = styled.div`
     #navigation {
       display: none;
       gap: 1em;
-      .active{
-        color: unset ;
-      }
-      li{
-        &:hover{
-          color: rgb(161 165 175);
-
-        }
-      }
+      
     }
     
   }

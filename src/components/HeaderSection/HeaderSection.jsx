@@ -5,7 +5,7 @@ import HeaderBody from './HeaderBody'
 
 const HeaderSection = () => {
   return (
-    <MainSection>
+    <MainSection id='home'>
       <Navigation />
       <HeaderBody />
     </MainSection>
