@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Colaps from "../../icons/Colaps";
-import Bed from "../../icons/bed";
-import Bath from "../../icons/bath";
+import Bed from "../../icons/Bed";
+import Bath from "../../icons/Bath";
 import RatingStar from "../../icons/RatingStar";
 import { Houses } from "../../assets/cardData/Houses";
 
