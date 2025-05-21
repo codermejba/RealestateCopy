@@ -14,7 +14,7 @@ const SearchForm = () => {
           <div className="row">
             <div className=" col-sm-12 col-md-6 col-xl my-3 my-xl-0">
               <div className="row gap-2">
-                <label htmlFor="">Search : </label>
+                <label >Search : </label>
                 <div className="input-icon-group">
                   <span className="group-icon"><SearchIcon/></span>
                   <input type="text" className="group-input" placeholder="Search your keyword" />
@@ -23,7 +23,7 @@ const SearchForm = () => {
             </div>
             <div className=" col-sm-12 col-md-6 col-xl my-3 my-xl-0">
               <div className="row gap-2">
-                <label htmlFor="">Select Categories : </label>
+                <label>Select Categories : </label>
                 <div className="input-icon-group">
                   <span className="group-icon"><HomeIcon/></span>
                   <select name="" id="" className="group-input" value={selectedValue} onChange={(event)=>setSelectedValue(event.target.value)}>
@@ -36,7 +36,7 @@ const SearchForm = () => {
             </div>
             <div className=" col-sm-12 col-md-6 col-xl my-3 my-xl-0">
               <div className="row gap-2">
-                <label htmlFor="">Min Price : </label>
+                <label>Min Price : </label>
                 <div className="input-icon-group">
                   <span className="group-icon">
                     <CurrencyIcon/>
@@ -51,7 +51,7 @@ const SearchForm = () => {
             </div>
             <div className=" col-sm-12 col-md-6 col-xl my-3 my-xl-0">
               <div className="row gap-2">
-                <label htmlFor="">Max Price : </label>
+                <label>Max Price : </label>
                 <div className="input-icon-group">
                   <span className="group-icon">
                     <CurrencyIcon/>

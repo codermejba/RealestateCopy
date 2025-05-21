@@ -1,6 +1,5 @@
 //https://hously-react.vercel.app/index-six
 
-import React from 'react'
 import HeaderSection from './components/HeaderSection/HeaderSection'
 import SearchForm from './components/SearchForm/SearchForm'
 import HeroSection from './components/HeroSection/HeroSection'

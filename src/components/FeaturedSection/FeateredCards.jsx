@@ -7,67 +7,64 @@ import { Houses } from "../../assets/cardData/Houses";
 
 const FeateredCards = () => {
   return (
-    <Main><div className="row">
-      {Houses.map((item, index) => (
-        <div key={index} className="col-4">
-        
-          <div className="featered-card ">
-            <div className="img">
-              <img src={item.img} alt="img" />
-            </div>
-            <div className="content m-4 overflow-hidden">
-              <div className="title">
-                <h6 className="pb-4">
-                  {item.title}
-                </h6>
+    <Main>
+      <div className="row">
+        {Houses.map((item, index) => (
+          <div key={index} className="col-4">
+            <div className="featered-card ">
+              <div className="img">
+                <img src={item.img} alt="img" />
               </div>
-              <div className="details row p-0 py-3">
-                <div className="col-4 d-flex justify-content-center">
-                  <Colaps /> 8000sqf
+              <div className="content m-4 overflow-hidden">
+                <div className="title">
+                  <h6 className="pb-4">{item.title}</h6>
                 </div>
-                <div className="col-4 d-flex justify-content-center">
-                  <Bed /> 4 Beds
+                <div className="details row p-0 py-3">
+                  <div className="col-4 d-flex justify-content-center">
+                    <Colaps /> 8000sqf
+                  </div>
+                  <div className="col-4 d-flex justify-content-center">
+                    <Bed /> 4 Beds
+                  </div>
+                  <div className="col-4 d-flex justify-content-center">
+                    <Bath /> 4 Bath
+                  </div>
                 </div>
-                <div className="col-4 d-flex justify-content-center">
-                  <Bath /> 4 Bath
-                </div>
-              </div>
-              <div className="pricing row py-4">
-                <div className="col-5">
-                  <p className="tag">price</p>
-                  <h6>$5000</h6>
-                </div>
-                <div className="col-7">
-                  <p className="tag">Rating</p>
-                  <div className="d-flex align-items-center">
-                    <div className=" d-flex">
-                      <span className=" d-flex align-items-center">
-                        <RatingStar />
-                      </span>
-                      <span className=" d-flex align-items-center">
-                        <RatingStar />
-                      </span>
-                      <span className=" d-flex align-items-center">
-                        <RatingStar />
-                      </span>
-                      <span className=" d-flex align-items-center">
-                        <RatingStar />
-                      </span>
-                      <span className=" d-flex align-items-center">
-                        <RatingStar />
-                      </span>
+                <div className="pricing row py-4">
+                  <div className="col-5">
+                    <p className="tag">price</p>
+                    <h6>$5000</h6>
+                  </div>
+                  <div className="col-7">
+                    <p className="tag">Rating</p>
+                    <div className="d-flex align-items-center">
+                      <div className=" d-flex">
+                        <span className=" d-flex align-items-center">
+                          <RatingStar />
+                        </span>
+                        <span className=" d-flex align-items-center">
+                          <RatingStar />
+                        </span>
+                        <span className=" d-flex align-items-center">
+                          <RatingStar />
+                        </span>
+                        <span className=" d-flex align-items-center">
+                          <RatingStar />
+                        </span>
+                        <span className=" d-flex align-items-center">
+                          <RatingStar />
+                        </span>
+                      </div>
+                      <h6 className="m-0 ">
+                        5.0 <span>(30)</span>
+                      </h6>
                     </div>
-                    <h6 className="m-0 ">
-                      5.0 <span>(30)</span>
-                    </h6>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-       
-       </div>
-      ))}
+        ))}
       </div>
     </Main>
   );

@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 import FeateredCards from "./FeateredCards";
 
@@ -19,8 +18,7 @@ const FeaturedSection = () => {
   );
 };
 const Main = styled.div`
-height: 200vh;
-
+  height: 200vh;
 `;
 const TopSection = styled.div`
   p {

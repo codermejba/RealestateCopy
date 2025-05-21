@@ -12,6 +12,13 @@ const HeaderButton = styled.button`
   padding-right: 1.75rem;
   border-radius: 0.5rem;
   transition: background .3s;
+ &:active, &:focus {
+    cursor: pointer;
+    background: rgb(21 128 61);
+    border: none;
+    outline: none;
+    text-transform: capitalize !important;
+}
   &:hover {
       background: rgb(21 128 61);
   }
