@@ -6,6 +6,8 @@ import { useState } from "react";
 
 const SearchForm = () => {
     const [selectedValue, setSelectedValue] = useState('Apartment');
+    const[minPrice, setMinPrice] = useState(1000);
+    const[maxPrice, setMaxPrice] = useState(3000);
   
   return (
     <div className="container" id="search">
@@ -41,7 +43,7 @@ const SearchForm = () => {
                   <span className="group-icon">
                     <CurrencyIcon/>
                   </span>
-                  <select name="" id="" className="group-input" value={selectedValue} onChange={(event)=>setSelectedValue(event.target.value)}>
+                  <select name="" id="" className="group-input" value={minPrice} onChange={(event)=>setMinPrice(event.target.value)}>
                     <option value="1000">1000</option>
                     <option value="2000">2000</option>
                     <option value="3000">3000</option>
@@ -56,7 +58,7 @@ const SearchForm = () => {
                   <span className="group-icon">
                     <CurrencyIcon/>
                   </span>
-                  <select name="" id="" className="group-input" value={selectedValue} onChange={(event)=>setSelectedValue(event.target.value)}>
+                  <select name="" id="" className="group-input" value={maxPrice} onChange={(event)=>setMaxPrice(event.target.value)}>
                     <option value="1000">1000</option>
                     <option value="2000">2000</option>
                     <option value="3000">3000</option>

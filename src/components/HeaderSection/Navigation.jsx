@@ -31,10 +31,12 @@ const Navigation = () => {
   return (
     <NavSection className={scrolled ? "scrollEffect" : ""}>
       <div className="container d-flex justify-content-between align-items-center h-100">
+        <a href="/">
         <div id="logo" className={` d-flex ${scrolled ? "blackLogo" : ""}`}>
           <img src="img/logo.ico" alt="logo" />
           <h4>Realestate</h4>
         </div>
+        </a>
         <NavigationBar className="d-flex align-items-center gap-3 gap-md-4 gap-lg-5">
           <ul id="navigation" className={`nav ${clicked ? "navShow" : ""} ${scrolled ? "blackNav" : "grayNav"}`} >
             <li className={scrolled ? "scrolledActiveColor" : "active"}> <a href="#home">Home</a></li>
