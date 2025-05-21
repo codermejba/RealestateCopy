@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import ProfileIcon from "../../../public/icons/ProfileIcon";
+import ProfileIcon from "../../icons/ProfileIcon";
 import HeaderButton from "../../assets/buttonStyle/HeaderButton";
 
 const Navigation = () => {

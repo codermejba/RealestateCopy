@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Colaps from "../../../public/icons/Colaps";
-import Bed from "../../../public/icons/bed";
-import Bath from "../../../public/icons/bath";
-import RatingStar from "../../../public/icons/RatingStar";
+import Colaps from "../../icons/Colaps";
+import Bed from "../../icons/bed";
+import Bath from "../../icons/bath";
+import RatingStar from "../../icons/RatingStar";
 import { Houses } from "../../assets/cardData/Houses";
 
 const FeateredCards = () => {

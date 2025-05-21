@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import SearchIcon from "../../../public/icons/SearchIcon";
-import HomeIcon from "../../../public/icons/HomeIcon";
-import CurrencyIcon from "../../../public/icons/CurrencyIcon";
+import SearchIcon from "../../icons/SearchIcon";
+import HomeIcon from "../../icons/HomeIcon";
+import CurrencyIcon from "../../icons/CurrencyIcon";
 import { useState } from "react";
 
 const SearchForm = () => {
