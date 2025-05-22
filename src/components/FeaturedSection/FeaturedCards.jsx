@@ -41,13 +41,13 @@ const FeaturedCards = () => {
                   <h6 className="pb-4">{item.title}</h6>
                 </div>
                 <div className="details row p-0 py-3">
-                  <div className="col-4 d-flex justify-content-center">
+                  <div className="col-4 d-flex justify-content-center align-items-center textWrap">
                     <Colaps /> 8000sqf
                   </div>
-                  <div className="col-4 d-flex justify-content-center">
+                  <div className="col-4 d-flex justify-content-center align-items-center textWrap">
                     <Bed /> 4 Beds
                   </div>
-                  <div className="col-4 d-flex justify-content-center">
+                  <div className="col-4 d-flex justify-content-center align-items-center textWrap">
                     <Bath /> 4 Bath
                   </div>
                 </div>
@@ -118,6 +118,8 @@ const Main = styled.div`
     }
   }
   .content {
+        white-space: nowrap;
+
     .title {
       transition: color 0.3s;
       border-bottom: 1px solid #3c485826;
@@ -128,6 +130,10 @@ const Main = styled.div`
         margin-right: 5px;
       }
     }
+      .textWrap{
+
+      }
+    
   }
   .pricing {
     .tag {
@@ -137,6 +143,14 @@ const Main = styled.div`
       height: 1rem;
       margin-right: 5px;
     }
+    /* mini screen */
+    
+     @media (max-width: 380px) {
+    svg {
+      margin-right: 0;
+    }
   }
+  }
+  
 `;
 export default FeaturedCards;

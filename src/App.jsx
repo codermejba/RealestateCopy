@@ -7,6 +7,8 @@ import FeaturedSection from './components/FeaturedSection/FeaturedSection'
 /* import slider styles */
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import ListingSection from './components/ListingSection/ListingSection';
+import ClientReview from './components/ClientReview/ClientReview';
 const App = () => {
   return (
     <>
@@ -14,6 +16,8 @@ const App = () => {
       <SearchForm/>
       <HeroSection/>
       <FeaturedSection/>
+      <ListingSection/>
+      <ClientReview/>
     </>
   )
 }

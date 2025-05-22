@@ -1,0 +1,33 @@
+
+export const ListingCardsData = [
+  {
+    img:"img/listingCards/residential.jpg",
+    title:"Residential",
+    list:"46"
+  },
+  {
+    img:"img/listingCards/land.jpg",
+    title:"Land",
+    list:"21"
+  },
+  {
+    img:"img/listingCards/commercial.jpg",
+    title:"Commercial",
+    list:"265"
+  },
+  {
+    img:"img/listingCards/industrial.jpg",
+    title:"Industrial",
+    list:"452"
+  },
+  {
+    img:"img/listingCards/investment.jpg",
+    title:"Investment",
+    list:"12"
+  },
+  {
+    img:"img/cards/img5.jpg",
+    title:"Investment",
+    list:"12"
+  },
+]
