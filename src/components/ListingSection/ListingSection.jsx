@@ -5,7 +5,7 @@ import ListingCards from "./ListingCards";
 const ListingSection = () => {
   return (
     <Main className="container py-5 my-5 border-3 border-primary">
-      <TopSection className="ms-3 d-flex flex-column align-items-center justify-content-center">
+      <TopSection id="lands" className="ms-3 d-flex flex-column align-items-center justify-content-center">
         <h3 className="fw-bold">Listing Categories</h3>
         <p>
           A great plateform to buy, sell and rent your properties without any

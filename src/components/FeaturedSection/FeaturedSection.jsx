@@ -5,7 +5,7 @@ const FeaturedSection = () => {
   return (
     <Main className="container py-5 my-5">
 
-      <TopSection className="ms-3 d-flex flex-column align-items-center justify-content-center">
+      <TopSection id="houses" className="ms-3 d-flex flex-column align-items-center justify-content-center">
         <h3 className="fw-bold">Featured Properties</h3>
         <p>
           A great plateform to buy, sell and rent your properties without any

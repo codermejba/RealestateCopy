@@ -3,7 +3,7 @@ import Colaps from "../../icons/Colaps";
 import Bed from "../../icons/Bed";
 import Bath from "../../icons/Bath";
 import RatingStar from "../../icons/RatingStar";
-import { Houses } from "../../assets/cardData/Houses";
+import { Houses } from "../../assets/data/Houses";
 import Slider from "react-slick";
 
 const FeaturedCards = () => {
@@ -28,7 +28,7 @@ const FeaturedCards = () => {
     ],
   };
   return (
-    <Main>
+    <Main className="mt-5">
       <Slider {...settings}>
         {Houses.map((item, index) => (
           <div key={index} className="px-2">

@@ -8,7 +8,9 @@ import FeaturedSection from './components/FeaturedSection/FeaturedSection'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import ListingSection from './components/ListingSection/ListingSection';
-import ClientReview from './components/ClientReview/ClientReview';
+import ClientReview from './components/ClientReview/ClientReviewSec';
+import ContactSection from './components/ContactSection/ContactSection';
+import FooterSection from './components/FooterSection/FooterSection';
 const App = () => {
   return (
     <>
@@ -18,6 +20,8 @@ const App = () => {
       <FeaturedSection/>
       <ListingSection/>
       <ClientReview/>
+      <ContactSection/>
+      <FooterSection/>
     </>
   )
 }

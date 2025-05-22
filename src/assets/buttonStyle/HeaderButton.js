@@ -8,8 +8,8 @@ const HeaderButton = styled.button`
   text-transform: capitalize !important;
   height: 2.5rem;
   line-height: 24px;
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.85rem;
   border-radius: 0.5rem;
   transition: background .3s;
  &:active, &:focus {

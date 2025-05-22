@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ListingCardsData } from '../../assets/cardData/ListingCardsData';
+import { ListingCardsData } from '../../assets/data/ListingCardsData';
 import styled from 'styled-components';
 
 const ListingCards = () => {
@@ -10,7 +10,7 @@ const ListingCards = () => {
   };
 
   return (
-    <Main className="container py-4">
+    <Main className="mt-5">
       <div className="row g-4">
         {ListingCardsData.map((card, index) => (
           <div className="col-md-4" key={index}>

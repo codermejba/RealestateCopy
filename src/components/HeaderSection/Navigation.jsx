@@ -40,10 +40,14 @@ const Navigation = () => {
         <NavigationBar className="d-flex align-items-center gap-3 gap-md-4 gap-lg-5">
           <ul id="navigation" className={`nav ${clicked ? "navShow" : ""} ${scrolled ? "blackNav" : "grayNav"}`} >
             <li className={scrolled ? "scrolledActiveColor" : "active"}> <a href="#home">Home</a></li>
-            <li ><a href="#search">Buy</a></li>
-            <li>sell</li>
-            <li>pages</li>
-            <li>contact</li>
+            <li ><a href="#search">Search</a></li>
+            <li>
+              <a href="#houses">Houses</a>
+            </li>
+            <li>
+              <a href="#lands">Lands</a>
+            </li>
+            <li><a href="/contact">contact us</a></li>
           </ul>
           <div className="d-flex">
             <div className="logIn">
