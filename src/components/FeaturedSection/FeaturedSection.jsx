@@ -12,7 +12,6 @@ const FeaturedSection = () => {
         </p>
       </TopSection>
       <Features className="my-5 py-4">
-        <FeaturedCards />
       </Features>
     </Main>
   );
