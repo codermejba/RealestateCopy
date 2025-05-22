@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import FeateredCards from "./FeateredCards";
+import FeaturedCards from "./FeaturedCards";
 
 const FeaturedSection = () => {
   return (
@@ -12,13 +12,12 @@ const FeaturedSection = () => {
         </p>
       </TopSection>
       <Features className="my-5 py-4">
-        <FeateredCards />
+        <FeaturedCards />
       </Features>
     </Main>
   );
 };
 const Main = styled.div`
-  height: 200vh;
 `;
 const TopSection = styled.div`
   p {
