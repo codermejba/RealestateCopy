@@ -6,7 +6,7 @@ const ClientReview = () => {
     return (
     <Main className="container py-5 my-5 border-3 border-primary">
       <TopSection className="ms-3 d-flex flex-column align-items-center justify-content-center">
-        <h3 className="fw-bold">Clients Reviews</h3>
+        <h2 className="fw-bold">Clients Reviews</h2>
        
       </TopSection>
       <ClientReviews />
