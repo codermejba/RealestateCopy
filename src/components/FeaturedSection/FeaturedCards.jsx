@@ -6,7 +6,7 @@ import RatingStar from "../../icons/RatingStar";
 import { Houses } from "../../assets/cardData/Houses";
 import Slider from "react-slick";
 
-const FeateredCards = () => {
+const FeaturedCards = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -15,7 +15,7 @@ const FeateredCards = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 992,   // tablet breakpoint
@@ -31,10 +31,10 @@ const FeateredCards = () => {
     <Main>
       <Slider {...settings}>
         {Houses.map((item, index) => (
-          <div key={index} className=" px-2">
+          <div key={index} className="px-2">
             <div className="featered-card ">
               <div className="img">
-                <img src={item.img} alt={item.title} />
+                <img style={{width:"100%",height:"100%"}} src={item.img} alt={item.title} />
               </div>
               <div className="content m-4 overflow-hidden">
                 <div className="title">
@@ -139,4 +139,4 @@ const Main = styled.div`
     }
   }
 `;
-export default FeateredCards;
+export default FeaturedCards;

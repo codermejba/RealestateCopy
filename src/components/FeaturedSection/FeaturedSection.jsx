@@ -11,7 +11,8 @@ const FeaturedSection = () => {
           agent or <br /> commisions.
         </p>
       </TopSection>
-      <Features className="my-5 py-4">
+      <Features className="">
+        <FeaturedCards />
       </Features>
     </Main>
   );
