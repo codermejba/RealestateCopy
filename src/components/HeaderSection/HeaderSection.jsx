@@ -1,12 +1,13 @@
 import React from 'react'
-import Navigation from './Navigation'
+
 import styled from 'styled-components'
 import HeaderBody from './HeaderBody'
+import HomeNavbar from '../NavBar/HomeNavbar'
 
 const HeaderSection = () => {
   return (
     <MainSection id='home'>
-      <Navigation />
+      <HomeNavbar />
       <HeaderBody />
     </MainSection>
   )

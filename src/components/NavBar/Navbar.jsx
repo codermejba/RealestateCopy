@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProfileIcon from "../../icons/ProfileIcon";
 import HeaderButton from "../../assets/buttonStyle/HeaderButton";
+import { Link } from "react-router-dom";
 
-const Navigation = () => {
+const Navbar = () => {
   const [clicked, setClicked] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -27,37 +28,49 @@ const Navigation = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  })
+  });
   return (
     <NavSection className={scrolled ? "scrollEffect" : ""}>
       <div className="container d-flex justify-content-between align-items-center h-100">
         <a href="/">
-        <div id="logo" className={` d-flex ${scrolled ? "blackLogo" : ""}`}>
-          <img src="img/logo.ico" alt="logo" />
-          <h4>Realestate</h4>
-        </div>
+          <div id="logo" className={` d-flex ${scrolled ? "blackLogo" : ""}`}>
+            
+              <img src="img/logo.ico" alt="logo" />
+              <h4>Realestate</h4>
+          </div>
         </a>
         <NavigationBar className="d-flex align-items-center gap-3 gap-md-4 gap-lg-5">
-          <ul id="navigation" className={`nav ${clicked ? "navShow" : ""} ${scrolled ? "blackNav" : "grayNav"}`} >
-            <li className={scrolled ? "scrolledActiveColor" : "active"}> <a href="#home">Home</a></li>
-            <li ><a href="#search">Search</a></li>
+          <ul
+            id="navigation"
+            className={`nav ${clicked ? "navShow" : ""} ${
+              scrolled ? "blackNav" : "grayNav"
+            }`}
+          >
             <li>
-              <a href="#houses">Houses</a>
+             
+              <Link to="/#home" >Home</Link>
             </li>
             <li>
-              <a href="#lands">Lands</a>
+              <Link to="/#search">Search</Link>
             </li>
-            <li><a href="/contact">contact us</a></li>
+            <li>
+              <Link to="/#houses" >Houses</Link>
+            </li>
+            <li>
+              <Link to="/#lands">Lands</Link>
+            </li>
+            <li className={scrolled ? "scrolledActiveColor" : "active"}>
+             <Link to="/contact" >contact us</Link>
+            </li>
           </ul>
           <div className="d-flex">
             <div className="logIn">
-            <HeaderButton className="button icon">
-              <ProfileIcon />
-            </HeaderButton>
+              <HeaderButton className="button icon">
+                <ProfileIcon />
+              </HeaderButton>
             </div>
             <div className="signUp">
-
-            <HeaderButton className="button">sign up</HeaderButton>
+              <HeaderButton className="button">sign up</HeaderButton>
             </div>
           </div>
           <div id="hamburg" className="" onClick={() => setClicked(!clicked)}>
@@ -74,10 +87,10 @@ const NavSection = styled.nav`
   position: fixed;
   background: transparent;
   top: 0;
-    left: 0;
+  left: 0;
   width: 100%;
   z-index: 999;
-  transition: all .5s cubic-bezier(.4,0,.2,1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid transparent;
 
   #logo {
@@ -108,7 +121,7 @@ const NavSection = styled.nav`
     #logo {
       color: black;
     }
-    
+
     #hamburg {
       display: flex !important;
     }
@@ -119,7 +132,7 @@ const NavigationBar = styled.div`
     align-items: center;
     font-size: 16px;
     letter-spacing: 1px;
-    
+
     li {
       padding: 0 20px;
       cursor: pointer;
@@ -207,23 +220,20 @@ const NavigationBar = styled.div`
     #navigation {
       display: none;
       gap: 1em;
-      
     }
-    
   }
   @media (max-width: 640px) {
-    .signUp{
+    .signUp {
       display: none;
     }
     #hamburg {
       margin-right: 1em;
     }
-    
   }
   @media (max-width: 300px) {
-    .logIn{
+    .logIn {
       display: none;
     }
   }
 `;
-export default Navigation;
+export default Navbar;

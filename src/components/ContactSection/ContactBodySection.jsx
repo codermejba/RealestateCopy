@@ -16,7 +16,7 @@ const ContactSection = () => {
       </TopSection>
       <div className="d-flex align-items-center justify-content-center my-3">
         <HeaderButton>
-          <a href="/contact">
+          <a href="#">
             <div className=" d-flex">
               <Call/>
               <span className="ms-2">Contact Us</span>

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import ClientReviews from './ClientReviews';
 
-const ClientReview = () => {
+const ClientReviewSec = () => {
     return (
     <Main className="container py-5 my-5 border-3 border-primary">
       <TopSection className="ms-3 d-flex flex-column align-items-center justify-content-center">
@@ -20,4 +20,4 @@ const TopSection = styled.div`
     text-align: center;
   } 
 `;
-export default ClientReview
+export default ClientReviewSec

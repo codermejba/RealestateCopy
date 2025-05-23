@@ -1,28 +1,21 @@
 //https://hously-react.vercel.app/index-six
 
-import HeaderSection from './components/HeaderSection/HeaderSection'
-import SearchForm from './components/SearchForm/SearchForm'
-import HeroSection from './components/HeroSection/HeroSection'
-import FeaturedSection from './components/FeaturedSection/FeaturedSection'
 /* import slider styles */
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import ListingSection from './components/ListingSection/ListingSection';
-import ClientReview from './components/ClientReview/ClientReviewSec';
-import ContactSection from './components/ContactSection/ContactSection';
-import FooterSection from './components/FooterSection/FooterSection';
+
+import { BrowserRouter, Routes, Route } from 'react-router';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 const App = () => {
   return (
-    <>
-      <HeaderSection/>
-      <SearchForm/>
-      <HeroSection/>
-      <FeaturedSection/>
-      <ListingSection/>
-      <ClientReview/>
-      <ContactSection/>
-      <FooterSection/>
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/contact' element={<Contact/>}/>
+      <Route path='*' element={<h1>404</h1>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
