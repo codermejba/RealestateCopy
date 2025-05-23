@@ -39,6 +39,10 @@ const Main = styled.div`
       border-bottom-right-radius: 10%;
       border-bottom-left-radius: 10%;
     }
+    @media (max-width: 	576px) {
+      border-bottom-right-radius: 5%;
+      border-bottom-left-radius: 5%;
+    }
     &::before {
       content: "";
       position: absolute;
