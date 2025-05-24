@@ -31,8 +31,8 @@ const Main = styled.div`
   .header {
     min-height: 60vh;
     position: relative;
-    border-bottom-right-radius: 20%;
-    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 15%;
+    border-bottom-left-radius: 15%;
     overflow: hidden;
 
     @media (max-width: 992px) {

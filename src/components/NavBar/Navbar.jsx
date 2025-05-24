@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProfileIcon from "../../icons/ProfileIcon";
+import RightArrow from "../../icons/RightArrow";
+
 import HeaderButton from "../../assets/buttonStyle/HeaderButton";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ user, handleSignUp, handleSignOut }) => {
   const [clicked, setClicked] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [iconSignout, setIconSignout] = useState(false);
+  
+    const handleIconSignOut = () => {
+      handleSignOut()
+      setIconSignout(false)
+    }
+
+
   useEffect(() => {
-    /**
-     * Function to handle the scroll event and update the component state accordingly.
-     * It checks if the window has scrolled past the top and updates the state accordingly.
-     * If the window has scrolled past the top, it sets the scrolled state to true,
-     * otherwise it sets it to false.
-     */
+   
     const handleScroll = () => {
       // Check if the window has scrolled past the top
       if (window.scrollY > 0) {
@@ -34,9 +39,8 @@ const Navbar = () => {
       <div className="container d-flex justify-content-between align-items-center h-100">
         <a href="/">
           <div id="logo" className={` d-flex ${scrolled ? "blackLogo" : ""}`}>
-            
-              <img src="img/logo.ico" alt="logo" />
-              <h4>Realestate</h4>
+            <img src="img/logo.ico" alt="logo" />
+            <h4>Realestate</h4>
           </div>
         </a>
         <NavigationBar className="d-flex align-items-center gap-3 gap-md-4 gap-lg-5">
@@ -47,30 +51,58 @@ const Navbar = () => {
             }`}
           >
             <li>
-             
-              <Link to="/#home" >Home</Link>
+              <Link to="/#home">Home</Link>
             </li>
             <li>
               <Link to="/#search">Search</Link>
             </li>
             <li>
-              <Link to="/#houses" >Houses</Link>
+              <Link to="/#houses">Houses</Link>
             </li>
             <li>
               <Link to="/#lands">Lands</Link>
             </li>
             <li className={scrolled ? "scrolledActiveColor" : "active"}>
-             <Link to="/contact" >contact us</Link>
+              <Link to="/contact">contact us</Link>
             </li>
           </ul>
           <div className="d-flex">
             <div className="logIn">
-              <HeaderButton className="button icon">
-                <ProfileIcon />
+              <HeaderButton className="button icon" aria-label="Log in">
+                {user ? (
+                  <button onClick={() => setIconSignout(!iconSignout)}>
+                    <img src={user.photoURL} alt={user.displayName} />
+                  </button>
+                ) : (
+                  <button onClick={handleSignUp}>
+                    <ProfileIcon />
+                  </button>
+                )}
               </HeaderButton>
+
+              <div
+                className={`loginPopup position-absolute ${
+                  iconSignout ? "" : " d-none"
+                }`}
+              >
+                <button className="d-flex signOutbtn" onClick={handleIconSignOut}>
+                  <p>Sign Out </p>
+                  <span className="">
+                    <RightArrow />{" "}
+                  </span>
+                </button>
+              </div>
             </div>
             <div className="signUp">
-              <HeaderButton className="button">sign up</HeaderButton>
+              {user ? (
+                <button onClick={handleSignOut}>
+                  <HeaderButton className="button">Sign Out</HeaderButton>
+                </button>
+              ) : (
+                <button onClick={handleSignUp}>
+                  <HeaderButton className="button">Sign Up</HeaderButton>
+                </button>
+              )}
             </div>
           </div>
           <div id="hamburg" className="" onClick={() => setClicked(!clicked)}>
@@ -103,19 +135,28 @@ const NavSection = styled.nav`
       height: 30px;
       margin: 0 !important;
     }
+    h4 {
+      margin-top: 5px !important;
+    }
   }
 
   .button {
     border-radius: 9999px !important;
   }
   .icon {
-    padding: 0 !important;
-    margin-right: 10px;
-    svg {
-      height: 100%;
-      padding: 10px;
+      padding: 0 !important;
+      margin-right: 10px;
+      overflow: hidden;
+      svg,
+      img,
+      button {
+        height: 100%;
+        width: 100%;
+      }
+      svg {
+        padding: 10px;
+      }
     }
-  }
   @media (max-width: 1050px) {
     background: white;
     #logo {
@@ -141,6 +182,31 @@ const NavigationBar = styled.div`
       transition: color 0.3s;
     }
   }
+  .loginPopup {
+    background-color: white;
+    margin-top: 15px;
+    p {
+      margin: 0;
+    }
+    span {
+      height: 20px;
+      width: 20px;
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
+    .signOutbtn {
+      color: #000000;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-bottom: 1px solid var(--secondary-color);
+      text-transform: capitalize !important;
+      transition: all 0.3s;
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
   #hamburg {
     display: none;
     width: 30px;
@@ -148,40 +214,41 @@ const NavigationBar = styled.div`
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
     div {
       width: 100%;
       height: 2px;
       background: #000;
       position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: #000;
-        top: -10px;
-        transform: rotate(0deg);
-        transition: top 0.3s 0.3s, transform 0.3s 0s;
-      }
+
+      &::before,
       &::after {
         content: "";
         position: absolute;
         width: 100%;
         height: 2px;
         background: #000;
+        transition: top 0.3s 0.3s, transform 0.3s;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
         top: 10px;
-        transform: rotate(0deg);
-        transition: top 0.3s 0.3s, transform 0.3s 0s;
       }
     }
 
     .active {
       background: transparent !important;
+
       &::before {
         top: 0 !important;
         transform: rotate(45deg) !important;
         transition: top 0.3s, transform 0.3s 0.3s !important;
       }
+
       &::after {
         top: 0 !important;
         transform: rotate(-45deg) !important;
@@ -189,6 +256,7 @@ const NavigationBar = styled.div`
       }
     }
   }
+
   .navShow {
     display: flex !important;
     align-items: flex-start !important;
@@ -216,12 +284,14 @@ const NavigationBar = styled.div`
       top: 100%;
     }
   }
+
   @media (max-width: 1050px) {
     #navigation {
       display: none;
       gap: 1em;
     }
   }
+
   @media (max-width: 640px) {
     .signUp {
       display: none;
@@ -230,10 +300,12 @@ const NavigationBar = styled.div`
       margin-right: 1em;
     }
   }
+
   @media (max-width: 300px) {
     .logIn {
       display: none;
     }
   }
 `;
+
 export default Navbar;

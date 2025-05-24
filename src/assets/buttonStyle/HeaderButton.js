@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-const HeaderButton = styled.button`
+const HeaderButton = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
   background: #16a34a;
   color: white;
   font-size: 16px;

@@ -3,17 +3,19 @@ import styled from "styled-components";
 import ProfileIcon from "../../icons/ProfileIcon";
 import HeaderButton from "../../assets/buttonStyle/HeaderButton";
 import { Link } from "react-router-dom";
+import RightArrow from "../../icons/RightArrow";
 
-
-const HomeNavbar = ({ user, handleSignUp, handleSignOut}) => {
+const HomeNavbar = ({ user, handleSignUp, handleSignOut }) => {
   const [clicked, setClicked] = useState(false);
   const [scrolled, setScrolled] = useState(false);
- 
-console.log(user?.photoURL);
 
+  const [iconSignout, setIconSignout] = useState(false);
 
-
-/* handle scroll */
+  const handleIconSignOut = () => {
+    handleSignOut()
+    setIconSignout(false)
+  }
+  /* handle scroll */
   useEffect(() => {
     const handleScroll = () => {
       requestAnimationFrame(() => {
@@ -23,11 +25,6 @@ console.log(user?.photoURL);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-
-
-
-
 
   const handleNavLinkClick = () => {
     setClicked(false);
@@ -39,7 +36,9 @@ console.log(user?.photoURL);
         <a href="/" aria-label="Home">
           <div id="logo" className={`d-flex ${scrolled ? "blackLogo" : ""}`}>
             <img src="img/logo.ico" alt="logo" />
-            <h4>Realestate</h4>
+            <h4 className=" d-flex align-items-center justify-content-center">
+              Realestate
+            </h4>
           </div>
         </a>
 
@@ -81,13 +80,28 @@ console.log(user?.photoURL);
             <div className="logIn">
               <HeaderButton className="button icon" aria-label="Log in">
                 {user ? (
-                  <img src={user.photoURL} alt={user.displayName} />
+                  <button onClick={() => setIconSignout(!iconSignout)}>
+                    <img src={user.photoURL} alt={user.displayName} />
+                  </button>
                 ) : (
                   <button onClick={handleSignUp}>
                     <ProfileIcon />
                   </button>
                 )}
               </HeaderButton>
+
+              <div
+                className={`loginPopup position-absolute ${
+                  iconSignout ? "" : " d-none"
+                }`}
+              >
+                <button className="d-flex signOutbtn" onClick={handleIconSignOut}>
+                  <p>Sign Out </p>
+                  <span className="">
+                    <RightArrow />{" "}
+                  </span>
+                </button>
+              </div>
             </div>
             <div className="signUp">
               {user ? (
@@ -101,7 +115,7 @@ console.log(user?.photoURL);
               )}
             </div>
           </div>
-
+          {/* hamburger menu */}
           <div
             id="hamburg"
             onClick={() => setClicked(!clicked)}
@@ -142,6 +156,9 @@ const NavSection = styled.nav`
     h4 {
       height: 30px;
       margin: 0 !important;
+    }
+    h4 {
+      margin-top: 5px !important;
     }
   }
 
@@ -191,6 +208,30 @@ const NavigationBar = styled.div`
       text-transform: capitalize;
       font-weight: 600;
       transition: color 0.3s;
+    }
+  }
+  .loginPopup {
+    background-color: white;
+    margin-top: 15px;
+    p {
+      margin: 0;
+    }
+    span {
+      height: 20px;
+      width: 20px;
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
+    .signOutbtn {
+      color: #000000;
+      font-weight: 600;
+      padding: 8px 15px;
+      border-bottom: 1px solid var(--secondary-color);
+      text-transform: capitalize !important;
+      transition: all 0.3s;
+      &:hover {
+        color: var(--primary-color);
+      }
     }
   }
 

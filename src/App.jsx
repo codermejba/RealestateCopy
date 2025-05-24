@@ -48,7 +48,7 @@ const App = () => {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home user={user} handleSignUp={handleSignUp} handleSignOut={handleSignOut}/>}/>
-      <Route path='/contact' element={<Contact/>}/>
+      <Route path='/contact' element={<Contact user={user} handleSignUp={handleSignUp} handleSignOut={handleSignOut} />}/>
       <Route path='*' element={<h1>404</h1>}/>
     </Routes>
     </BrowserRouter>

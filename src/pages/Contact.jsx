@@ -4,10 +4,10 @@ import ContactPage from "../components/ContactPage/ContactPage";
 import FooterSection from "../components/FooterSection/FooterSection";
 import Navbar from "../components/NavBar/Navbar";
 
-const Contact = () => {
+const Contact = ({user,handleSignUp,handleSignOut}) => {
   return (
     <MainSection>
-      <Navbar />
+      <Navbar  user={user} handleSignUp={handleSignUp} handleSignOut={handleSignOut} />
       <ContactPage />
       <FooterSection />
     </MainSection>
