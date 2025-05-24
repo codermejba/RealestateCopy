@@ -3,24 +3,17 @@ import styled from "styled-components";
 import ProfileIcon from "../../icons/ProfileIcon";
 import HeaderButton from "../../assets/buttonStyle/HeaderButton";
 import { Link } from "react-router-dom";
-import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "../../firebase";
 
-const HomeNavbar = () => {
+
+const HomeNavbar = ({ user, handleSignUp, handleSignOut}) => {
   const [clicked, setClicked] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-const [user,setUser]=useState(null)
-  const handleSignUp=async ()=>{
-    try {
-      const result=await signInWithPopup(auth,provider)
-      const user=result.user
-      setUser(user)
-      console.log(user);
-      
-    } catch (error) {
-       console.log("Error signing in:", error.message);
-    }
-  };
+ 
+console.log(user?.photoURL);
+
+
+
+/* handle scroll */
   useEffect(() => {
     const handleScroll = () => {
       requestAnimationFrame(() => {
@@ -30,6 +23,11 @@ const [user,setUser]=useState(null)
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
+
+
+
 
   const handleNavLinkClick = () => {
     setClicked(false);
@@ -53,26 +51,55 @@ const [user,setUser]=useState(null)
             }`}
           >
             <li className={scrolled ? "scrolledActiveColor" : "active"}>
-              <a href="#home" onClick={handleNavLinkClick}>Home</a>
+              <a href="#home" onClick={handleNavLinkClick}>
+                Home
+              </a>
             </li>
-            <li><a href="#search" onClick={handleNavLinkClick}>Search</a></li>
-            <li><a href="#houses" onClick={handleNavLinkClick}>Houses</a></li>
-            <li><a href="#lands" onClick={handleNavLinkClick}>Lands</a></li>
-            <li><Link to="/contact" onClick={handleNavLinkClick}>Contact Us</Link></li>
+            <li>
+              <a href="#search" onClick={handleNavLinkClick}>
+                Search
+              </a>
+            </li>
+            <li>
+              <a href="#houses" onClick={handleNavLinkClick}>
+                Houses
+              </a>
+            </li>
+            <li>
+              <a href="#lands" onClick={handleNavLinkClick}>
+                Lands
+              </a>
+            </li>
+            <li>
+              <Link to="/contact" onClick={handleNavLinkClick}>
+                Contact Us
+              </Link>
+            </li>
           </ul>
 
           <div className="d-flex">
             <div className="logIn">
               <HeaderButton className="button icon" aria-label="Log in">
-                {
-                  user? <img src={user.photoURL} alt={user.displayName} />: <button onClick={handleSignUp}><ProfileIcon /></button>
-                }
-               
+                {user ? (
+                  <img src={user.photoURL} alt={user.displayName} />
+                ) : (
+                  <button onClick={handleSignUp}>
+                    <ProfileIcon />
+                  </button>
+                )}
               </HeaderButton>
             </div>
-            <button className="signUp"  onClick={handleSignUp}>
-              <HeaderButton className="button">Sign Up</HeaderButton>
-            </button>
+            <div className="signUp">
+              {user ? (
+                <button onClick={handleSignOut}>
+                  <HeaderButton className="button">Sign Out</HeaderButton>
+                </button>
+              ) : (
+                <button onClick={handleSignUp}>
+                  <HeaderButton className="button">Sign Up</HeaderButton>
+                </button>
+              )}
+            </div>
           </div>
 
           <div
@@ -111,7 +138,8 @@ const NavSection = styled.nav`
     color: #ffffff;
     gap: 10px;
     cursor: pointer;
-    img, h4 {
+    img,
+    h4 {
       height: 30px;
       margin: 0 !important;
     }
@@ -129,13 +157,14 @@ const NavSection = styled.nav`
     padding: 0 !important;
     margin-right: 10px;
     overflow: hidden;
-    svg, img,button {
+    svg,
+    img,
+    button {
       height: 100%;
       width: 100%;
     }
     svg {
       padding: 10px;
-      
     }
   }
 

@@ -8,10 +8,10 @@ import ClientReviewSec from '../components/ClientReview/ClientReviewSec'
 import FooterSection from '../components/FooterSection/FooterSection'
 import ContactSection from '../components/ContactSection/ContactBodySection'
 
-const Home = () => {
+const Home = ({user,handleSignUp,handleSignOut}) => {
   return (
     <>
-    <HeaderSection />
+    <HeaderSection user={user} handleSignUp={handleSignUp} handleSignOut={handleSignOut} />
     <SearchForm />
     <HeroSection />
     <FeaturedSection />

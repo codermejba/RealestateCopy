@@ -4,10 +4,12 @@ import styled from 'styled-components'
 import HeaderBody from './HeaderBody'
 import HomeNavbar from '../NavBar/HomeNavbar'
 
-const HeaderSection = () => {
+const HeaderSection = ({user,handleSignUp,handleSignOut}) => {
+  
+  
   return (
     <MainSection id='home'>
-      <HomeNavbar />
+      <HomeNavbar user={user} handleSignUp={handleSignUp} handleSignOut={handleSignOut}/>
       <HeaderBody />
     </MainSection>
   )
