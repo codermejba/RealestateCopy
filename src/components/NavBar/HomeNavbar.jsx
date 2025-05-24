@@ -9,15 +9,16 @@ import { auth, provider } from "../../firebase";
 const HomeNavbar = () => {
   const [clicked, setClicked] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
+const [user,setUser]=useState(null)
   const handleSignUp=async ()=>{
     try {
       const result=await signInWithPopup(auth,provider)
       const user=result.user
+      setUser(user)
       console.log(user);
       
     } catch (error) {
-       alert.error("Error signing in:", error);
+       alert.error("Error signing in:", error.massage);
     }
   };
   useEffect(() => {
@@ -63,12 +64,15 @@ const HomeNavbar = () => {
           <div className="d-flex">
             <div className="logIn">
               <HeaderButton className="button icon" aria-label="Log in">
-                <ProfileIcon />
+                {
+                  user? <img src={user.photoURL} alt={user.displayName} />: <button onAbort={handleSignUp}><ProfileIcon /></button>
+                }
+               
               </HeaderButton>
             </div>
-            <div className="signUp">
-              <HeaderButton className="button" onClick={handleSignUp()}>Sign Up</HeaderButton>
-            </div>
+            <button className="signUp"  onClick={handleSignUp}>
+              <HeaderButton className="button">Sign Up</HeaderButton>
+            </button>
           </div>
 
           <div
@@ -124,9 +128,14 @@ const NavSection = styled.nav`
   .icon {
     padding: 0 !important;
     margin-right: 10px;
-    svg {
+    overflow: hidden;
+    svg, img,button {
       height: 100%;
+      width: 100%;
+    }
+    svg {
       padding: 10px;
+      
     }
   }
 
