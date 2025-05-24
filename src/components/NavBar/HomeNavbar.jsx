@@ -3,11 +3,23 @@ import styled from "styled-components";
 import ProfileIcon from "../../icons/ProfileIcon";
 import HeaderButton from "../../assets/buttonStyle/HeaderButton";
 import { Link } from "react-router-dom";
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "../../firebase";
 
 const HomeNavbar = () => {
   const [clicked, setClicked] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const handleSignUp=async ()=>{
+    try {
+      const result=await signInWithPopup(auth,provider)
+      const user=result.user
+      console.log(user);
+      
+    } catch (error) {
+       alert.error("Error signing in:", error);
+    }
+  };
   useEffect(() => {
     const handleScroll = () => {
       requestAnimationFrame(() => {
@@ -55,7 +67,7 @@ const HomeNavbar = () => {
               </HeaderButton>
             </div>
             <div className="signUp">
-              <HeaderButton className="button">Sign Up</HeaderButton>
+              <HeaderButton className="button" onClick={handleSignUp()}>Sign Up</HeaderButton>
             </div>
           </div>
 
