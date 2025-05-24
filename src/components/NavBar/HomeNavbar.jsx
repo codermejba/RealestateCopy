@@ -18,7 +18,7 @@ const [user,setUser]=useState(null)
       console.log(user);
       
     } catch (error) {
-       alert("Error signing in:", error.message);
+       console.log("Error signing in:", error.message);
     }
   };
   useEffect(() => {
