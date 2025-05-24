@@ -65,7 +65,7 @@ const [user,setUser]=useState(null)
             <div className="logIn">
               <HeaderButton className="button icon" aria-label="Log in">
                 {
-                  user? <img src={user.photoURL} alt={user.displayName} />: <button onAbort={handleSignUp}><ProfileIcon /></button>
+                  user? <img src={user.photoURL} alt={user.displayName} />: <button onClick={handleSignUp}><ProfileIcon /></button>
                 }
                
               </HeaderButton>
