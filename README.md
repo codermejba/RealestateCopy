@@ -20,7 +20,7 @@ Explore the live site here:
 - Firebase Authentication for secure user sign-in/sign-out  
 - Contact form connected to Firebase Firestore for message persistence  
 
-
+---
 ### About Me
 Mejba Hasan — 
 
