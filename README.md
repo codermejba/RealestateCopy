@@ -56,9 +56,9 @@ Explore the live site here:
 
 Screenshots are located in the `/screenshots` directory.
 
-| Desktop View                | Tablet / iPad View             | Mobile View                  |
+| Mobile View                  | Desktop View                | Tablet / iPad View             |
 |-----------------------------|-------------------------------|-----------------------------|
-| ![Desktop](./screenshorts/realstate-desktop-view.PNG) | ![Tablet](./screenshorts/realstate-ipad2-view.PNG) | ![Mobile](./screenshorts/realstate-phone-view.PNG) |
+| ![Mobile](./screenshorts/realstate-phone-view.PNG) | ![Desktop](./screenshorts/realstate-desktop-view.PNG) | ![Tablet](./screenshorts/realstate-ipad2-view.PNG) |
 
 ---
 
