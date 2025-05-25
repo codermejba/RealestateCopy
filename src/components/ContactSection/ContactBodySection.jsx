@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import HeaderButton from "../../assets/buttonStyle/HeaderButton";
 import Call from "../../icons/Call";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   return (
@@ -16,12 +17,12 @@ const ContactSection = () => {
       </TopSection>
       <div className="d-flex align-items-center justify-content-center my-3">
         <HeaderButton>
-          <a href="#">
+          <Link to="/contact">
             <div className=" d-flex">
               <Call/>
               <span className="ms-2">Contact Us</span>
             </div>
-          </a>
+          </Link>
         </HeaderButton>
       </div>
     </Main>

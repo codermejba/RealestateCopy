@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ContactFormSvg from "../../icons/ContactFormSvg";
 import ContactForm from "./ContactForm";
 
-const ContactPage = () => {
+const ContactPage = ({user}) => {
   return (
     <Main className="">
       <div className="header d-flex align-items-center justify-content-center">
@@ -20,7 +20,7 @@ const ContactPage = () => {
             />
           </div>
           <div className="form col-lg-6">
-            <ContactForm />
+            <ContactForm user={user} />
           </div>
         </div>
       </div>
@@ -64,16 +64,6 @@ const Main = styled.div`
       z-index: -1;
     }
   }
-  .formSection {
-    .icon {
-      height: 100vh;
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
-    .form {
-    }
-  }
+ 
 `;
 export default ContactPage;

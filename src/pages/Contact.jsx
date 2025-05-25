@@ -8,7 +8,7 @@ const Contact = ({user,handleSignUp,handleSignOut}) => {
   return (
     <MainSection>
       <Navbar  user={user} handleSignUp={handleSignUp} handleSignOut={handleSignOut} />
-      <ContactPage />
+      <ContactPage user={user} />
       <FooterSection />
     </MainSection>
   );

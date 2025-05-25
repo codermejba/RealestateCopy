@@ -40,7 +40,7 @@ const Navbar = ({ user, handleSignUp, handleSignOut }) => {
         <a href="/">
           <div id="logo" className={` d-flex ${scrolled ? "blackLogo" : ""}`}>
             <img src="img/logo.ico" alt="logo" />
-            <h4>Realestate</h4>
+            <h4 className=" d-flex align-items-center justify-content-center">Realestate</h4>
           </div>
         </a>
         <NavigationBar className="d-flex align-items-center gap-3 gap-md-4 gap-lg-5">
