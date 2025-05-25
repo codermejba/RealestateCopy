@@ -21,7 +21,7 @@ const ContactForm = ({ user }) => {
     try {
       await addDoc(collection(db, "GetTouch"), data);
       alert("Message sent successfully!");
-      // reset();clear the form
+      reset(); //clear the form
     } catch (error) {
       console.error("Error sending message:", error.message); // show readable message
       console.error(error); // show the full object
