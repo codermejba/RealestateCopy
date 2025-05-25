@@ -22,17 +22,33 @@ Explore the live site here:
 
 ---
 
-## Technology Stack
+## Technology Stack & Dependencies
 
-| Technology          | Purpose                                  |
-|---------------------|------------------------------------------|
-| React               | UI development and component management |
-| Vite                | Development build tool                   |
-| Bootstrap 5         | Responsive layout and styling            |
-| Styled-components   | CSS-in-JS styling                        |
-| Firebase Auth       | User authentication                      |
-| Firebase Firestore  | Cloud database for message storage      |
-| React Icons         | UI iconography                          |
+| Package             | Purpose                                  | Version          |
+|---------------------|------------------------------------------|------------------|
+| react               | UI development and component management | ^18.2.0          |
+| react-dom           | DOM rendering                            | ^18.2.0          |
+| react-router-dom    | Client-side routing                      | ^7.6.0           |
+| react-hook-form     | Form handling and validation             | ^7.56.4          |
+| bootstrap           | Responsive layout and styling            | ^5.3.2           |
+| @popperjs/core      | Tooltip & popover positioning for Bootstrap | ^2.11.8       |
+| styled-components   | CSS-in-JS styling                        | ^6.1.8           |
+| firebase            | Authentication and Firestore database    | ^11.8.1          |
+| react-slick         | Carousel component                       | ^0.30.3          |
+| slick-carousel      | Carousel styles                          | ^1.8.1           |
+
+**Dev Dependencies**
+
+| Package               | Purpose                                  | Version          |
+|-----------------------|------------------------------------------|------------------|
+| vite                  | Build tool and dev server                 | ^6.3.5           |
+| @vitejs/plugin-react  | React plugin for Vite                     | ^4.2.1           |
+| eslint                | Linting utility                           | ^8.55.0          |
+| eslint-plugin-react   | React linting rules                       | ^7.33.2          |
+| eslint-plugin-react-hooks | React hooks linting rules             | ^4.6.0           |
+| eslint-plugin-react-refresh | React Refresh linting                | ^0.4.5           |
+| @types/react          | TypeScript typings for React (if used)  | ^18.2.43         |
+| @types/react-dom      | TypeScript typings for React DOM (if used) | ^18.2.17       |
 
 ---
 
