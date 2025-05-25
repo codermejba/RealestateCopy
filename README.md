@@ -58,7 +58,7 @@ Screenshots are located in the `/screenshots` directory.
 
 | Desktop View                | Tablet / iPad View             | Mobile View                  |
 |-----------------------------|-------------------------------|-----------------------------|
-| ![Desktop](./screenshots/desktop.png) | ![Tablet](./screenshots/ipad.png) | ![Mobile](./screenshots/mobile.png) |
+| ![Desktop](./screenshorts/realstate-desktop-view.PNG) | ![Tablet](./screenshorts/realstate-ipad2-view.PNG) | ![Mobile](./screenshorts/realstate-phone-view.PNG) |
 
 ---
 
