@@ -1,54 +1,61 @@
-# Real Estate Landing Page Clone
+# 🏡 Real Estate Landing Page — Hously Clone (React + Bootstrap 5)
 
-This project is a clone of the **Hously Landing Page (index-six)**, originally built using Tailwind CSS. I rebuilt it using **React**, **Bootstrap 5**, and **styled-components** to enhance my frontend development skills and gain experience with layout replication and responsive design.
+This project is a pixel-perfect clone of the **Hously Landing Page (index-six)**, originally built with Tailwind CSS. I rebuilt it using **React**, **Bootstrap 5**, and **styled-components** to sharpen my frontend development skills and gain real experience in layout replication, component structuring, and responsive design.
+
+---
 
 ## 🔗 Live Demo
 
-Check out the live demo here:  
 👉 [https://realestate-copy.vercel.app/](https://realestate-copy.vercel.app/)
 
 ---
 
 ## 🚀 Features
 
-- 🔹 Fully responsive layout
-- 🔹 Bootstrap 5 grid and utility classes
-- 🔹 Styled-components for custom styles
-- 🔹 Component-based React architecture
-- 🔹 Clean and modern UI
-- 🔹 Optimized for mobile and tablet devices
+- 🔹 Fully responsive layout for all screen sizes  
+- 🔹 Bootstrap 5 grid and utility classes  
+- 🔹 Styled-components for scoped, reusable styling  
+- 🔹 Component-based React architecture  
+- 🔹 Clean and modern UI inspired by real-world design  
+- 🔹 Firebase Authentication integration for user sign-in/sign-out  
+- 🔹 Contact form with Firebase Firestore integration to save messages  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **React**
-- **Vite**
-- **Bootstrap 5**
-- **Styled-components**
-- **React Icons**
+- ⚛️ **React**  
+- ⚡ **Vite**  
+- 🎨 **Bootstrap 5**  
+- 💅 **Styled-components**  
+- 🔐 **Firebase Auth & Firestore**  
+- 🌟 **React Icons**  
 
 ---
 
 ## 📸 Screenshots
 
-<!-- Add screenshots of the landing page sections -->
-_Add screenshots here to showcase your design visually._
+> Add your screenshots in the `screenshots/` folder of the repo.
 
----
+### 🖥️ Desktop View  
+![Desktop Screenshot](./screenshorts/realstate-desktop-view.PNG)  
 
-## 🧠 What I Learned
+### 📱 Mobile View  
+![Mobile Screenshot](./screenshorts/realstate-phone-view.PNG)  
 
-- Building pixel-perfect UIs from a reference design
-- Combining Bootstrap with styled-components
-- Structuring large React projects into reusable components
-- Managing layout responsiveness using Bootstrap classes
+### 📱 iPad / Tablet View  
+![Tablet Screenshot](./screenshorts/realstate-ipad2-view.PNG)  
 
 ---
 
 ## 📂 Getting Started
 
-Clone the repository:
+### 🧰 Prerequisites
+
+- Node.js and npm  
+- Code editor like VS Code  
+
+### 🔧 Installation
 
 ```bash
 git clone https://github.com/codermejba/RealestateCopy.git
