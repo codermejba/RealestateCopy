@@ -1,61 +1,60 @@
-# 🏡 Real Estate Landing Page — Hously Clone (React + Bootstrap 5)
+# Real Estate Landing Page — React & Bootstrap 5
 
-This project is a pixel-perfect clone of the **Hously Landing Page (index-six)**, originally built with Tailwind CSS. I rebuilt it using **React**, **Bootstrap 5**, and **styled-components** to sharpen my frontend development skills and gain real experience in layout replication, component structuring, and responsive design.
-
----
-
-## 🔗 Live Demo
-
-👉 [https://realestate-copy.vercel.app/](https://realestate-copy.vercel.app/)
+A modern, fully responsive real estate landing page built with **React**, **Bootstrap 5**, and **styled-components**. This project demonstrates practical frontend skills including component-driven architecture, responsive design, and Firebase integration for authentication and data storage.
 
 ---
 
-## 🚀 Features
+## Live Demo
 
-- 🔹 Fully responsive layout for all screen sizes  
-- 🔹 Bootstrap 5 grid and utility classes  
-- 🔹 Styled-components for scoped, reusable styling  
-- 🔹 Component-based React architecture  
-- 🔹 Clean and modern UI inspired by real-world design  
-- 🔹 Firebase Authentication integration for user sign-in/sign-out  
-- 🔹 Contact form with Firebase Firestore integration to save messages  
+Explore the live site here:  
+[https://realestate-copy.vercel.app/](https://realestate-copy.vercel.app/)
 
 ---
 
-## 🛠️ Tech Stack
+## Features
 
-- ⚛️ **React**  
-- ⚡ **Vite**  
-- 🎨 **Bootstrap 5**  
-- 💅 **Styled-components**  
-- 🔐 **Firebase Auth & Firestore**  
-- 🌟 **React Icons**  
-
----
-
-## 📸 Screenshots
-
-> Add your screenshots in the `screenshots/` folder of the repo.
-
-### 🖥️ Desktop View  
-![Desktop Screenshot](./screenshorts/realstate-desktop-view.PNG)  
-
-### 📱 Mobile View  
-![Mobile Screenshot](./screenshorts/realstate-phone-view.PNG)  
-
-### 📱 iPad / Tablet View  
-![Tablet Screenshot](./screenshorts/realstate-ipad2-view.PNG)  
+- Responsive design optimized for desktop, tablet, and mobile devices  
+- Utilizes Bootstrap 5 grid and utility classes for efficient layout  
+- Styled-components for scoped, maintainable CSS  
+- React functional components with hooks for state management  
+- Firebase Authentication for secure user sign-in/sign-out  
+- Contact form connected to Firebase Firestore for message persistence  
 
 ---
 
-## 📂 Getting Started
+## Technology Stack
 
-### 🧰 Prerequisites
+| Technology          | Purpose                                  |
+|---------------------|------------------------------------------|
+| React               | UI development and component management |
+| Vite                | Development build tool                   |
+| Bootstrap 5         | Responsive layout and styling            |
+| Styled-components   | CSS-in-JS styling                        |
+| Firebase Auth       | User authentication                      |
+| Firebase Firestore  | Cloud database for message storage      |
+| React Icons         | UI iconography                          |
 
-- Node.js and npm  
-- Code editor like VS Code  
+---
 
-### 🔧 Installation
+## Screenshots
+
+Screenshots are located in the `/screenshots` directory.
+
+| Desktop View                | Tablet / iPad View             | Mobile View                  |
+|-----------------------------|-------------------------------|-----------------------------|
+| ![Desktop](./screenshots/desktop.png) | ![Tablet](./screenshots/ipad.png) | ![Mobile](./screenshots/mobile.png) |
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14+)  
+- npm or yarn  
+- Code editor (e.g., VS Code)
+
+### Installation
 
 ```bash
 git clone https://github.com/codermejba/RealestateCopy.git
