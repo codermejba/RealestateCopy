@@ -20,8 +20,17 @@ Explore the live site here:
 - Firebase Authentication for secure user sign-in/sign-out  
 - Contact form connected to Firebase Firestore for message persistence  
 
----
 
+### About Me
+Mejba Hasan — 
+
+Portfolio: https://mejba-hasan-portfolio.vercel.app/
+
+LinkedIn: https://www.linkedin.com/in/mejbahasan/
+
+GitHub: https://github.com/codermejba
+
+---
 ## Technology Stack & Dependencies
 
 | Package             | Purpose                                  | Version          |
@@ -77,3 +86,4 @@ git clone https://github.com/codermejba/RealestateCopy.git
 cd RealestateCopy
 npm install
 npm run dev
+
